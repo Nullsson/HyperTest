@@ -1,5 +1,5 @@
-#ifndef UNITTEST_TEST_H
-#define UNITTEST_TEST_H
+#ifndef HYPERTEST_TEST_H
+#define HYPERTEST_TEST_H
 #pragma once
 
 // TODO: Clean this mess up.
@@ -26,4 +26,4 @@
     }\
     void Test_Run_##SET##_##NAME(int *Result)
 
-#endif //UNITTEST_TEST_H
+#endif //HYPERTEST_TEST_H

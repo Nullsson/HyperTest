@@ -1,5 +1,5 @@
-#ifndef WIN32_UNITTEST_H
-#define WIN32_UNITTEST_H
+#ifndef WIN32_HYPERTEST_H
+#define WIN32_HYPERTEST_H
 #pragma once
 
 // NOTE: CRT hack
@@ -28,4 +28,4 @@ struct test_state
     FILE *Output;
 };
 
-#endif //WIN32_UNITTEST_H
+#endif //WIN32_HYPERTEST_H

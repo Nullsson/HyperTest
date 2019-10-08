@@ -1,5 +1,5 @@
-#ifndef UNITTEST_HTTP_H
-#define UNITTEST_HTTP_H
+#ifndef HYPERTEST_HTTP_H
+#define HYPERTEST_HTTP_H
 #pragma once
 
 struct unittest_http_request
@@ -41,4 +41,4 @@ struct unittest_http_response
     char *BufferPointer; // NOTE: This is placed here so the user can free the allocated buffer.
 };
 
-#endif // UNITTEST_HTTP_H
+#endif // HYPERTEST_HTTP_H

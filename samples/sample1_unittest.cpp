@@ -1,4 +1,4 @@
-#include "../code/win32_unittest.cpp"
+#include "../code/win32_hypertest.cpp"
 #include "sample1.cpp"
 
 TEST(IsPrimeTest, Negative)

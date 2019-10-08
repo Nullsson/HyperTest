@@ -6,11 +6,11 @@
 #include "windows.h"
 #include "winsock2.h"
 #include "ws2tcpip.h"
-#include "win32_unittest.h"
-#include "unittest_test.h"
-#include "unittest_types.h"
-#include "unittest_asserts.h"
-#include "unittest_http.cpp"
+#include "win32_hypertest.h"
+#include "hypertest_test.h"
+#include "hypertest_types.h"
+#include "hypertest_asserts.h"
+#include "hypertest_http.cpp"
 
 // TODO: Clean the code.
 // TODO: Create function for colored output to increase readability.

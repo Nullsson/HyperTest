@@ -1,5 +1,5 @@
-#ifndef UNITTEST_TYPES_H
-#define UNITTEST_TYPES_H
+#ifndef HYPERTEST_TYPES_H
+#define HYPERTEST_TYPES_H
 #pragma once
 
 #include <stdint.h>
@@ -81,4 +81,4 @@ UNITTEST_ZeroSize(memory_index Size, void *Pointer)
 
 #define UNITTEST_ZeroStruct(Instance) UNITTEST_ZeroSize(sizeof(Instance), &(Instance))
 
-#endif // UNITTEST_TYPES_H
+#endif // HYPERTEST_TYPES_H

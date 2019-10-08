@@ -1,5 +1,5 @@
-#ifndef UNITTEST_ASSERTS_H
-#define UNITTEST_ASSERTS_H
+#ifndef HYPERTEST_ASSERTS_H
+#define HYPERTEST_ASSERTS_H
 #pragma once
 
 // TODO: Extend this macro if we want to include file logging.
@@ -83,4 +83,4 @@
     UNITTEST_PRINTF(Message); \
     *Result = 1;
 
-#endif // UNITTEST_ASSERTS_H
+#endif // HYPERTEST_ASSERTS_H
