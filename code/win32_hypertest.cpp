@@ -49,6 +49,14 @@ RunTesting(int argc, char ** argv)
         RanTests++;
     }
 
+    printf("    __  __                     ______          __ \n");
+    printf("   / / / /_  ______  ___  ____/_  __/__  _____/ /_\n");
+    printf("  / /_/ / / / / __ \\/ _ \\/ ___// / / _ \\/ ___/ __/\n");
+    printf(" / __  / /_/ / /_/ /  __/ /   / / /  __(__  ) /_  \n");
+    printf("/_/ /_/\\__, / .___/\\___/_/   /_/  \\___/____/\\__/  \n");
+    printf("      /____/_/                                    \n");
+    printf("Created by Oskar Mendel.\n\n");
+
     SetConsoleTextAttribute(HConsole, FOREGROUND_GREEN);
     printf("[==========]");
     SetConsoleTextAttribute(HConsole, SavedAttributes);
