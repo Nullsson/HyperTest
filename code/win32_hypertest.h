@@ -11,7 +11,6 @@
 static void __cdecl f(void)
 #endif
 
-// TODO: Naming.
 typedef void (*Unittest_Testcase)(int *, size_t);
 
 struct test
