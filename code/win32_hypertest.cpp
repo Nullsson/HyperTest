@@ -4,13 +4,13 @@
 #include "stdlib.h"
 #include "string.h"
 #include "windows.h"
-#include "winsock2.h"
-#include "ws2tcpip.h"
+// #include "winsock2.h"
+// #include "ws2tcpip.h"
 #include "win32_hypertest.h"
 #include "hypertest_test.h"
 #include "hypertest_types.h"
 #include "hypertest_asserts.h"
-#include "hypertest_http.cpp"
+//#include "hypertest_http.cpp"
 
 // TODO: Clean the code.
 // TODO: Create function for colored output to increase readability.
@@ -25,10 +25,10 @@ int
 RunTesting(int argc, char ** argv)
 {
     LARGE_INTEGER PerfCounterFrequency = {};
-    u64 Failed = 0;
+    uint64_t Failed = 0;
     size_t *FailedTestCases = 0;
     size_t NumberOfFailedTestCases = 0;
-    u64 RanTests = 0;
+    uint64_t RanTests = 0;
 
     QueryPerformanceFrequency(&PerfCounterFrequency);
 
@@ -44,7 +44,7 @@ RunTesting(int argc, char ** argv)
 
     // TODO: Check command line args for --help etc..
 
-    for (u32 Index = 0; Index < TestState.NumberOfTests; ++Index)
+    for (uint32_t Index = 0; Index < TestState.NumberOfTests; ++Index)
     {
         RanTests++;
     }
@@ -60,13 +60,13 @@ RunTesting(int argc, char ** argv)
     SetConsoleTextAttribute(HConsole, FOREGROUND_GREEN);
     printf("[==========]");
     SetConsoleTextAttribute(HConsole, SavedAttributes);
-    printf(" Running %I64u tests.\n", (u64) RanTests);
+    printf(" Running %I64u tests.\n", (uint64_t) RanTests);
     
     // NOTE: Run tests.
-    for (u64 Index = 0; Index < TestState.NumberOfTests; Index++)
+    for (uint64_t Index = 0; Index < TestState.NumberOfTests; Index++)
     {
         int Result = 0;
-        s64 NanoSeconds = 0;
+        int64_t NanoSeconds = 0;
         LARGE_INTEGER PerfCounterStart = {};
         LARGE_INTEGER PerfCounterEnd = {};
 
@@ -123,7 +123,7 @@ RunTesting(int argc, char ** argv)
         printf(" %I64u tests, listed bellow:\n", Failed);
 
         // TODO: For loop and loop through failed tests.
-        for (u64 Index = 0; Index < NumberOfFailedTestCases; ++Index)
+        for (uint64_t Index = 0; Index < NumberOfFailedTestCases; ++Index)
         {
             SetConsoleTextAttribute(HConsole, FOREGROUND_RED);
             printf("[  FAILED  ]");
@@ -133,14 +133,14 @@ RunTesting(int argc, char ** argv)
     }
 
     // NOTE: Cleanup of allocated test data
-    for (u64 Index = 0; Index < TestState.NumberOfTests; ++Index)
+    for (uint64_t Index = 0; Index < TestState.NumberOfTests; ++Index)
     {
         free((void *) TestState.Tests[Index].Name);
     }
 
     free((void *) TestState.Tests);
 
-    return ((s32) Failed);
+    return ((int32_t) Failed);
 }
 
 int 
