@@ -5,8 +5,8 @@
 // TODO: Clean this mess up.
 #define TEST(SET, NAME) \
     extern "C" struct test_state TestState; \
-    OM_INTERNAL void Test_Run_##SET##_##NAME(int *Result);\
-    OM_INTERNAL void Test_##SET##_##NAME(int *Result, size_t TestIndex) \
+    static void Test_Run_##SET##_##NAME(int *Result);\
+    static void Test_##SET##_##NAME(int *Result, size_t TestIndex) \
     { \
         (void)TestIndex;\
         Test_Run_##SET##_##NAME(Result);\
@@ -15,7 +15,7 @@
     {\
         size_t Index = TestState.NumberOfTests++;\
         const char *NamePart = #SET "." #NAME; \
-        u32 NameSize = strlen(NamePart) + 1; \
+        uint32_t NameSize = strlen(NamePart) + 1; \
         char *Name = (char *) malloc(NameSize); \
         TestState.Tests =                                                        \
         (struct test *) realloc((void *) TestState.Tests,      \
