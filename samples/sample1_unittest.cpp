@@ -5,7 +5,7 @@ TEST(IsPrimeTest, Negative)
 {
     UNITTEST_ASSERT_FALSE(IsPrime(-1));
     UNITTEST_ASSERT_FALSE(IsPrime(-2));
-    UNITTEST_ASSERT_FALSE(IsPrime(I32MIN));
+    UNITTEST_ASSERT_FALSE(IsPrime((int32_t)0x80000000));
 }
 
 TEST(FailingTest, ThisShouldFail)
