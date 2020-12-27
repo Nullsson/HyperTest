@@ -1,6 +1,9 @@
-#ifndef WIN32_HYPERTEST_H
-#define WIN32_HYPERTEST_H
-#pragma once
+#ifndef HYPERTEST_H
+#define HYPERTEST_H
+
+#include "stdio.h"
+#include "stdlib.h"
+#include "string.h"
 
 // NOTE: CRT hack
 #if defined(_MSC_VER)
@@ -27,4 +30,4 @@ struct test_state
     FILE *Output;
 };
 
-#endif //WIN32_HYPERTEST_H
+#endif // HYPERTEST_H

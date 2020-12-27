@@ -1,5 +1,9 @@
-#include "../code/win32_hypertest.cpp"
+#include "../code/hypertest.cpp"
 #include "sample1.cpp"
+
+#if BUILD_LINUX
+#include <unistd.h>
+#endif
 
 TEST(IsPrimeTest, Negative)
 {
@@ -31,5 +35,9 @@ TEST(Test, SomeName)
 
 TEST(Timing, ShouldTakeFiveMilNs)
 {
+#if BUILD_WINDOWS
     Sleep(5);
+#elif BUILD_LINUX
+    sleep(5);
+#endif
 }
