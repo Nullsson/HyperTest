@@ -1,7 +1,20 @@
 #include "sample1.h"
 
+// Returns the factorial of the specified number.
+int 
+Factorial(int Number) {
+  int Result = 1;
+  for (int Index = 1; Index <= Number; Index++) {
+    Result *= Index;
+  }
+
+  return Result;
+}
+
+
 // Returns true if specified number is prime; false otherwise.
-bool IsPrime(int Number)
+bool 
+IsPrime(int Number)
 {
     if (Number <= 1)
     {
