@@ -1,25 +1,15 @@
 #define WIN32_LEAN_AND_MEAN
 
-#include "stdio.h"
-#include "stdlib.h"
-#include "string.h"
 #include "windows.h"
-// #include "winsock2.h"
-// #include "ws2tcpip.h"
-#include "win32_hypertest.h"
-#include "hypertest_test.h"
-#include "hypertest_types.h"
-#include "hypertest_asserts.h"
-//#include "hypertest_http.cpp"
+#include "../hypertest_test.h"
+#include "../hypertest_types.h"
+#include "../hypertest_asserts.h"
 
 // TODO: Clean the code.
 // TODO: Create function for colored output to increase readability.
 // TODO: Add further samples to the testing tool. Perhaps look what other
 //       tools support.
 // TODO: Update this software once additional functionality is needed.
-
-// NOTE: Global Unittest state that will be executed.
-struct test_state TestState;
 
 int 
 RunTesting(int argc, char ** argv)
@@ -40,7 +30,6 @@ RunTesting(int argc, char ** argv)
     // NOTE: Save current console attributes to reset to once done with colored output.
     GetConsoleScreenBufferInfo(HConsole, &ConsoleInfo);
     SavedAttributes = ConsoleInfo.wAttributes;
-
 
     // TODO: Check command line args for --help etc..
 
@@ -141,10 +130,4 @@ RunTesting(int argc, char ** argv)
     free((void *) TestState.Tests);
 
     return ((int32_t) Failed);
-}
-
-int 
-main(int argc, char **argv)
-{
-    return RunTesting(argc, argv);
 }
