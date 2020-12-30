@@ -22,4 +22,5 @@ jobs:
       - name: Run Sample 1 Tests
         shell: cmd
         run: |
+          cd samples
           sample1_unittest.exe
