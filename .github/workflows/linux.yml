@@ -1,0 +1,29 @@
+name: Linux
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Setup gcc
+        run: |
+          sudo apt update
+          sudo apt install build-essential
+          gcc --version
+
+      - name: Build
+        shell: bash
+        run: |
+          cd samples
+          ./build_gcc.sh
+
+      - name: Run Sample 1 Tests
+        shell: bash
+        run: |
+          cd samples
+          ./sample1_unittest
