@@ -12,9 +12,9 @@ jobs:
 
       - name: Build
       - run: |
-        cd samples
-        build_msvc.bat
+          cd samples
+          build_msvc.bat
 
       - name: Run Sample 1 Tests
       - run: |
-        sample1_unittest.exe
+          sample1_unittest.exe
