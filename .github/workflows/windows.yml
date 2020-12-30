@@ -1,0 +1,20 @@
+name: Windows
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Build
+      - run: |
+        cd samples
+        build_msvc.bat
+
+      - name: Run Sample 1 Tests
+      - run: |
+        sample1_unittest.exe
