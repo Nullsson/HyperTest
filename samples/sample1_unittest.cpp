@@ -13,7 +13,7 @@ TEST(FactorialTest, Zero) {
 }
 
 TEST(FactorialTest, Positive) {
-  UNITTEST_EXPECT_EQUAL(2, Factorial(1));
+  UNITTEST_EXPECT_EQUAL(1, Factorial(1));
   UNITTEST_EXPECT_EQUAL(2, Factorial(2));
   UNITTEST_EXPECT_EQUAL(6, Factorial(3));
   UNITTEST_EXPECT_EQUAL(40320, Factorial(8));
