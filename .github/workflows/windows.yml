@@ -7,14 +7,17 @@ jobs:
     runs-on: windows-latest
     
     steps:
-      - uses: actions/checkout@v2
-      - uses: ilammy/msvc-dev-cmd@v1
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Setup cl.exe
+        uses: ilammy/msvc-dev-cmd@v1
 
       - name: Build
-      - run: |
+        run: |
           cd samples
           build_msvc.bat
 
       - name: Run Sample 1 Tests
-      - run: |
+        run: |
           sample1_unittest.exe
