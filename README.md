@@ -1,5 +1,9 @@
 # HyperTest
 
+![Windows](https://github.com/Nullsson/HyperTest/workflows/Windows/badge.svg?branch=master)
+![Linux](https://github.com/Nullsson/HyperTest/workflows/Linux/badge.svg?branch=master)
+![MacOs](https://github.com/Nullsson/HyperTest/workflows/MacOs/badge.svg?branch=master)
+
 HyperTest is a small unit testing library built to be simple enough for someone
 to skim through the source to understand it as well as having a low learning
 curve.
