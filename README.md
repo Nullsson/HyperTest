@@ -85,4 +85,6 @@ Where CompilerFlags and LinkerFlags would be your flags sent to the compiler. cl
 
 ## Contributing
 
+Thank you for considering contributing to HyperTest. We are always looking to improve HyperTest in any way possible wether its documentation, improvements or bugfixes. If you are interested in contributing please find an issue in the [issues page](https://github.com/Nullsson/HyperTest/issues) and "claim" the issue. If there is no issue for the bug / improovement you are looking to make then please create one before you submit your pull request.
+
 ## How to test
