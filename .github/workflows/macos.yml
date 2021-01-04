@@ -1,0 +1,23 @@
+name: MacOs
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build
+        shell: bash
+        run: |
+          cd samples
+          ./build_gcc.sh
+
+      - name: Run Sample 1 Tests
+        shell: bash
+        run: |
+          cd samples
+          ./sample1_unittest

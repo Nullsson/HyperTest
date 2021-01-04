@@ -2,9 +2,10 @@
 #define HYPERTEST_TEST_H
 #pragma once
 
+//extern "C" struct test_state TestState; \
+    
 // TODO: Clean this mess up.
 #define TEST(SET, NAME) \
-    extern "C" struct test_state TestState; \
     static void Test_Run_##SET##_##NAME(int *Result);\
     static void Test_##SET##_##NAME(int *Result, size_t TestIndex) \
     { \

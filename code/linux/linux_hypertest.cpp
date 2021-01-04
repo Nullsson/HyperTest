@@ -26,7 +26,7 @@ RunTesting(int argc, char **argv)
     printf("Created by Oskar Mendel.\n\n");
 
     printf("[==========]");
-    printf(" Running %I64u tests.\n", (uint64_t) RanTests);
+    printf(" Running %lld tests.\n", (uint64_t) RanTests);
     
     // NOTE: Run tests.
     for (uint64_t Index = 0; Index < TestState.NumberOfTests; Index++)
@@ -49,26 +49,26 @@ RunTesting(int argc, char **argv)
             Failed++;
 
             printf("[  FAILED  ]");
-            printf(" %s (%I64u ns)\n", TestState.Tests[Index].Name, NanoSeconds);
+            printf(" %s (%lld ns)\n", TestState.Tests[Index].Name, NanoSeconds);
         }
         else
         {
             printf("[       OK ]");
-            printf(" %s (%I64u ns)\n", TestState.Tests[Index].Name, NanoSeconds);
+            printf(" %s (%lld ns)\n", TestState.Tests[Index].Name, NanoSeconds);
         }
     }
 
     // NOTE: Printing overview data of entire ran test.
     printf("[==========]");
-    printf(" %I64u test cases ran.\n", RanTests);
+    printf(" %lld test cases ran.\n", RanTests);
 
     printf("[  PASSED  ]");
-    printf(" %I64u tests.\n", RanTests - Failed);
+    printf(" %lld tests.\n", RanTests - Failed);
 
     if (Failed)
     {
         printf("[  FAILED  ]");
-        printf(" %I64u tests, listed bellow:\n", Failed);
+        printf(" %lld tests, listed bellow:\n", Failed);
 
         // TODO: For loop and loop through failed tests.
         for (uint64_t Index = 0; Index < NumberOfFailedTestCases; ++Index)

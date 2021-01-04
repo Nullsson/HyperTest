@@ -1,5 +1,9 @@
 # HyperTest
 
+![Windows](https://github.com/Nullsson/HyperTest/workflows/Windows/badge.svg?branch=master)
+![Linux](https://github.com/Nullsson/HyperTest/workflows/Linux/badge.svg?branch=master)
+![MacOs](https://github.com/Nullsson/HyperTest/workflows/MacOs/badge.svg?branch=master)
+
 HyperTest is a small unit testing library built to be simple enough for someone
 to skim through the source to understand it as well as having a low learning
 curve.
@@ -80,5 +84,7 @@ Use the flags `DBUILD_WINDOWS` and `DBUILD_LINUX` to state wether your building 
 Where CompilerFlags and LinkerFlags would be your flags sent to the compiler. cl has a list of compiler flags in their [Documentation](https://docs.microsoft.com/en-us/cpp/build/reference/compiler-options-listed-alphabetically?view=vs-2019)
 
 ## Contributing
+
+Thank you for considering contributing to HyperTest. We are always looking to improve HyperTest in any way possible wether its documentation, improvements or bugfixes. If you are interested in contributing please find an issue in the [issues page](https://github.com/Nullsson/HyperTest/issues) and "claim" the issue. If there is no issue for the bug / improovement you are looking to make then please create one before you submit your pull request.
 
 ## How to test
